@@ -26,7 +26,7 @@ function equalityCheck() {
         playerScore = playerScore + 1;
         playerTip = "Correct, click to play again";
         document.getElementById("playButton").value = "Play now";
-        // clearTimeout(timerId);
+        clearTimeout(timerId);
     } else {
         document.getElementById("playButton").value = "Guess again";
         if (playerGuess < randomNumber) {
