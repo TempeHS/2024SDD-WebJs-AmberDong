@@ -12,7 +12,7 @@ function gameLoop() {
     randomNumber = 5;
    equalityCheck();
    updateHtmlContent();
-   //secondCountDown();
+   secondCountDown();
 }
 
 function generateRandomNumber() {
@@ -39,6 +39,7 @@ function equalityCheck() {
             playerTip = "Enter a number between 1 & 10";
         }
     }
+    return
 }
 function updateHtmlContent() {
     document.getElementById("playerScoreContent").innerHTML = playerScore;
@@ -46,5 +47,12 @@ function updateHtmlContent() {
     document.getElementById("tipContent").innerHTML = playerTip;
 }
 function secondCountDown() {
-    
+    if (currentSecond!= 1) {
+        currentSecond = currentSecond - 1;
+        document.getElementById("countDown").innerHTML = currentSecond;
+    } else {
+        endGame();
+        return
+    }
+    timerId = setTimeout("secondCountDown()", 1000);
 }
