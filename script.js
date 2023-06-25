@@ -9,7 +9,6 @@ var timerId = 0;
 
 function gameLoop() {
    generateRandomNumber();
-   randomNumber = 5;
    equalityCheck();
    updateHtmlContent();
    secondCountDown();
