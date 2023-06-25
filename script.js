@@ -8,8 +8,8 @@ var currentSecond = 11;
 var timerId = 0;
 
 function gameLoop() {
-    generateRandomNumber();
-    randomNumber = 5;
+   generateRandomNumber();
+   randomNumber = 5;
    equalityCheck();
    updateHtmlContent();
    secondCountDown();
@@ -55,4 +55,7 @@ function secondCountDown() {
         return
     }
     timerId = setTimeout("secondCountDown()", 1000);
+}
+function endGame() {
+    alert ( "hi");
 }
