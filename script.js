@@ -57,5 +57,13 @@ function secondCountDown() {
     timerId = setTimeout("secondCountDown()", 1000);
 }
 function endGame() {
-    alert ( "hi");
+    computerScore = computerScore + 1;
+    generateRandomNumber();
+    currentSecond = 11;
+    playerTip = "Too slow, click to play again";
+    updateHtmlContent();
+    document.getElementById("playButton").value = "Play Now";
+    document.getElementById("countDown").value = 0;
+    updateHtmlContent();
+    clearTimeout(timerId);
 }
