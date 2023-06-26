@@ -33,12 +33,34 @@ function equalityCheck (playerChoice, computerChoice){
 	// perform an equality check, update scores and output a string using concatenation that gives user feedback 
 
 
-
 	alert (playerChoice);  //for debug only
-	alert (computerChoice); //for debug only
+	alert(computerChoice); //for debug only
+	if (playerChoice == "Rock") {
+		againstRock();
+	} else {
+		if (playerChoice == "Paper") {
+			againstPaper();
+		} else {
+			if (playerChoice == "Scissors") {
+				againstScissors();
+			}
+		}
+	}
+	
 
-	const playerTip = 0;
+	const playerTip = "Click to play again";
 	document.getElementById("playerScoreContent").innerHTML = playerScore;
 	document.getElementById("computerScoreContent").innerHTML = computerScore;
 	document.getElementById("tipContent").innerHTML = playerTip;
+}
+function againstRock() {
+	alert("hi");
+}
+
+function againstPaper() {
+	alert("hi");
+}
+
+function againstScissors() {
+	alert("hi");
 }
