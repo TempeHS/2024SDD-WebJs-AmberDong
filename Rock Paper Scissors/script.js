@@ -10,17 +10,13 @@
 
 
 
-let playerScore;
-let computerScore;
+let playerScore = 0;
+let computerScore = 0;
 
 function gameLoop (playerClicked) {
 	const randomNumber = generateRandomNumber()
 	// convert random number to a choice so you can both equality check and use in the ouput string it should be stored in a const 
-	
-	
-	
-	const computerChoice = randomNumber //for debug only
-	equalityCheck (playerClicked, computerChoice);
+	equalityCheck (playerClicked, randomNumber);
 }
 
 function generateRandomNumber () {
@@ -29,52 +25,58 @@ function generateRandomNumber () {
 }
 
 
-function equalityCheck (playerChoice, computerChoice){
+function equalityCheck(playerChoice, randomNumber) {
 	// perform an equality check, update scores and output a string using concatenation that gives user feedback 
+	let playerTip;
 
-
-	alert (playerChoice);  //for debug only
-	alert(computerChoice); //for debug only
-	if (playerChoice == "Rock") {
-		againstRock();
-	} else {
-		if (playerChoice == "Paper") {
-			againstPaper();
+	if (randomNumber == 1) { 
+		if (playerChoice == "Rock") {
+			playerTip = "Player Chose: Rock, Computer Chose: Rock, Results: Its a Tie";
 		} else {
-			if (playerChoice == "Scissors") {
-				againstScissors();
+			if (playerChoice == "Paper") {
+				playerScore++;
+				playerTip = "Player Chose: Paper, Computer Chose: Rock, Results: Player Wins";
+			} else {
+				if (playerChoice == "Scissors") {
+					computerScore++;
+					playerTip = "Player Chose: Scissors, Computer Chose: Rock, Results: Computer Wins";
+				}
 			}
 		}
 	}
-	
-	let playerTip = 0;
+
+	if (randomNumber == 2) {
+		if (playerChoice == "Rock") {
+			computerScore++;
+			playerTip = "Player Chose: Rock, Computer Chose: Paper, Results: Computer Wins";
+		} else {
+			if (playerChoice == "Paper") {
+				playerTip = "Player Chose: Paper, Computer Chose: Paper, Results: It's a Tie";
+			} else {
+				if (playerChoice == "Scissors") {
+					playerScore++;
+					playerTip = "Player Chose: Scissors, Computer Chose: Paper, Results: Player Wins";
+				}
+			}
+		}
+	}
+	if (randomNumber == 3) {
+		if (playerChoice == "Rock") {
+			playerScore++;
+			playerTip = "Player Chose: Rock, Computer Chose: Scissors, Results: Player Wins";
+		} else {
+			if (playerChoice == "Paper") {
+				computerScore++;
+				playerTip = "Player Chose: Paper, Computer Chose: Scissors, Results: Computer Wins";
+			} else {
+				if (playerChoice == "Scissors") {
+					playerTip = "Player Chose: Scissors, Computer Chose: Scissors, Results: It's a Tie";
+				}
+			}
+		}
+	}
+
 	document.getElementById("playerScoreContent").innerHTML = playerScore;
 	document.getElementById("computerScoreContent").innerHTML = computerScore;
 	document.getElementById("tipContent").innerHTML = playerTip;
-}
-function againstRock() {
-	if (randomNumber = 1) { //1 = Rock
-		alert("Hi");
-		playerTip = "Tie";
-	} else {
-		if (randomNumber = 2) { // 2 = Paper
-			alert("Hi");
-			computerScore = computerScore + 1;
-			playerTip = "Computer Wins";
-		} else {
-			if (randomNumber = 3) { // 3 = Scissors
-				alert("Hi");
-				playerScore = playerScore + 1;
-				playerTip = "Player Wins";
-			}
-		}
 	}
-}
-
-function againstPaper() {
-	alert("hi");
-}
-
-function againstScissors() {
-		alert("hi");
-}
