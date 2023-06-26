@@ -47,14 +47,28 @@ function equalityCheck (playerChoice, computerChoice){
 		}
 	}
 	
-
-	const playerTip = "Click to play again";
+	let playerTip = 0;
 	document.getElementById("playerScoreContent").innerHTML = playerScore;
 	document.getElementById("computerScoreContent").innerHTML = computerScore;
 	document.getElementById("tipContent").innerHTML = playerTip;
 }
 function againstRock() {
-	alert("hi");
+	if (randomNumber = 1) { //1 = Rock
+		alert("Hi");
+		playerTip = "Tie";
+	} else {
+		if (randomNumber = 2) { // 2 = Paper
+			alert("Hi");
+			computerScore = computerScore + 1;
+			playerTip = "Computer Wins";
+		} else {
+			if (randomNumber = 3) { // 3 = Scissors
+				alert("Hi");
+				playerScore = playerScore + 1;
+				playerTip = "Player Wins";
+			}
+		}
+	}
 }
 
 function againstPaper() {
@@ -62,5 +76,5 @@ function againstPaper() {
 }
 
 function againstScissors() {
-	alert("hi");
+		alert("hi");
 }
