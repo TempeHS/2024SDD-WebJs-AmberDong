@@ -31,15 +31,15 @@ function equalityCheck(playerChoice, randomNumber) {
 
 	if (randomNumber == 1) { 
 		if (playerChoice == "Rock") {
-			playerTip = "Player Chose: Rock, Computer Chose: Rock, Results: Its a Tie";
+			playerTip = "Player Choice: Rock, Computer Choice: Rock, Results: Its a Tie";
 		} else {
 			if (playerChoice == "Paper") {
 				playerScore++;
-				playerTip = "Player Chose: Paper, Computer Chose: Rock, Results: Player Wins";
+				playerTip = "Player Choice: Paper, Computer Choice: Rock, Results: Player Wins";
 			} else {
 				if (playerChoice == "Scissors") {
 					computerScore++;
-					playerTip = "Player Chose: Scissors, Computer Chose: Rock, Results: Computer Wins";
+					playerTip = "Player Choice: Scissors, Computer Choice: Rock, Results: Computer Wins";
 				}
 			}
 		}
@@ -48,14 +48,14 @@ function equalityCheck(playerChoice, randomNumber) {
 	if (randomNumber == 2) {
 		if (playerChoice == "Rock") {
 			computerScore++;
-			playerTip = "Player Chose: Rock, Computer Chose: Paper, Results: Computer Wins";
+			playerTip = "Player Choice: Rock, Computer Choice: Paper, Results: Computer Wins";
 		} else {
 			if (playerChoice == "Paper") {
-				playerTip = "Player Chose: Paper, Computer Chose: Paper, Results: It's a Tie";
+				playerTip = "Player Choice: Paper, Computer Choice: Paper, Results: It's a Tie";
 			} else {
 				if (playerChoice == "Scissors") {
 					playerScore++;
-					playerTip = "Player Chose: Scissors, Computer Chose: Paper, Results: Player Wins";
+					playerTip = "Player Choice: Scissors, Computer Choice: Paper, Results: Player Wins";
 				}
 			}
 		}
@@ -63,14 +63,14 @@ function equalityCheck(playerChoice, randomNumber) {
 	if (randomNumber == 3) {
 		if (playerChoice == "Rock") {
 			playerScore++;
-			playerTip = "Player Chose: Rock, Computer Chose: Scissors, Results: Player Wins";
+			playerTip = "Player Choice: Rock, Computer Choice: Scissors, Results: Player Wins";
 		} else {
 			if (playerChoice == "Paper") {
 				computerScore++;
-				playerTip = "Player Chose: Paper, Computer Chose: Scissors, Results: Computer Wins";
+				playerTip = "Player Choice: Paper, Computer Choice: Scissors, Results: Computer Wins";
 			} else {
 				if (playerChoice == "Scissors") {
-					playerTip = "Player Chose: Scissors, Computer Chose: Scissors, Results: It's a Tie";
+					playerTip = "Player Choice: Scissors, Computer Choice: Scissors, Results: It's a Tie";
 				}
 			}
 		}
