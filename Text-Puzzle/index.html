@@ -13,10 +13,13 @@
 		body {
 			background-color: lightslategrey;
 		}
+		button {
+			all: unset;
+		}
 	</style>
 	<div class="container text-center">
 		<h1>The TRICK to learning JS</h1>
-		<h3>While JavaScript is relatively simple <button id="two">two</button>learn when compared to other languages, it still requires an investment of three things; time, patience, and effort to gain a solid understanding. Once you learn the tricks it's very easy.</h3>
+		<h3>While JavaScript is relatively simple <button id="2" type="button" onclick="gameLoop('number');">two</button> learn when compared to other languages, it still requires an investment of <button id="3" type="button" onclick="gameLoop('number');">three</button> things; time, patience, and effort to gain a solid understanding. <button id="1" onclick="gameLoop('number');">Once</button> you learn the tricks it's very easy.</h3>
 		<h2 id="playerWin">See it was that easy!</h2>
 	<div>
 	<!-- DO NOT EDIT BELOW THIS LINE -->
