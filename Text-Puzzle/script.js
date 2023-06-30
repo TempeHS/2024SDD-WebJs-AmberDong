@@ -12,8 +12,8 @@ x.style.display = "block";
 x.style.fontStyle = "italic";
 x.style.color = "black";
 
-$("click")
-var x = document.getElementById("to");
+
+
 
 
 
