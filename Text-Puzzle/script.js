@@ -1,10 +1,10 @@
 //**********************************************************************************
-// written by Ben Jones
+// written by Amber Dong
 //
 // Student idea container, students use tehir HTML, CSS & JS skills to turn this into a word puzzle game.
 //
 // Written 23/6/2023
-// License: https://github.com/TempeHS/2024SDD-WebJS-Ben.Jones/blob/main/LICENSE
+// License: https://github.com/TempeHS/2024SDD-WebJS-Ben.Jones/blob/main/LICENSE https://github.com/TempeHS/2024SDD-WebJs-AmberDong/blob/fb1d897f51b9de5b0797d82d4c2b56dc4a1a1059/LICENSE
 //**********************************************************************************
 
 let x = document.getElementById("playerWin");
